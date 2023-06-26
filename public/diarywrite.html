@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Diary</title>
+
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/diarywrite.css">
+  </head>
+  <body>
+    <header>
+        <div>
+            <h1>
+                <a href="index.html"
+                  ><img src="./css/images/moodlogo_42.png" alt="상단로고이미지"
+                ></a>
+            </h1>
+            <nav>
+                <ul>
+                  <li><a href="./diarywrite.html">일기 쓰기</a></li>
+                  <li><a href="./diaryshow">나의 한 달</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="content">
+        <div class="content_box">
+            <h2 class="hidden">일기 작성페이지</h2>
+            <nav class="emotions">
+                <p>#mood</p>
+                <p>-</p>
+                <ul class="positive">
+                    <li>기쁘다</li>
+                    <li>좋다</li>
+                    <li>만족스럽다</li>
+                    <li>흐뭇하다</li>
+                    <li>감격스럽다</li>
+                    <li>흥겹다</li>
+                    <li>가슴벅차다</li>
+                    <li>사랑스럽다</li>
+                    <li>열정있다</li>
+                    <li>온화하다</li>
+                    <li>애착이간다</li>
+                    <li>뿌듯하다</li>
+                    <li>믿음직하다</li>
+                    <li>갖고싶다</li>
+                    <li>활기차다</li>
+                </ul>
+                <p>-</p>
+                <ul class="negative">
+                    <li>화난다</li>
+                    <li>신경질난다</li>
+                    <li>싫다</li>
+                    <li>속상하다</li>
+                    <li>불쾌하다</li>
+                    <li>서운하다</li>
+                    <li>환멸난다</li>
+                    <li>답답하다</li>
+                    <li>상처받았다</li>
+                    <li>처량하다</li>
+                    <li>암담하다</li>
+                    <li>서럽다</li>
+                    <li>불안하다</li>
+                    <li>부끄럽다</li>
+                    <li>약오른다</li>
+                </ul>
+            </nav>
+            <div class="write_box">
+                <form action="/diarywrite" method="post">
+                    <p>오늘의 일기</p>
+                    <ul>
+                        <li><input type="text" name="title" placeholder="제목을 작성해주세요"></li>
+                        <li><input type="date" name="date" ></li>
+                        <li><input type="text" name="mood" placeholder="오늘 주요 감정"></li>
+                        <li><textarea id="usertext" name="usertext" cols="100" rows="10"></textarea></li>
+                    </ul>
+                    <button type="submit">저장</button>
+                </form>
+            </div>
+        </div>
+        
+    </section>
+    <footer>
+        <div>
+            <address>
+                경기도 성남시 중원구 성남동 3219번지 KR 아트팰리스 4호 5층<br>
+                COPYRIGHT &copy; 2023 소공소공. ALL RIGHTS RESERVED.
+              </address>
+              <h2><img src="./css/images/moodlogo_42.png" alt="하단로고이미지"></h2>
+        </div>
+    </footer>
+  </body>
+</html>

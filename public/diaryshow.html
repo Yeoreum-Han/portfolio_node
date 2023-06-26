@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Diary</title>
+
+    <script>
+      function deleteDiary(url) {
+        let answer = confirm('일기를 삭제합니다');
+        if(answer == true) {
+          location = url;
+        }
+        else {
+          return false;
+        }
+      }
+    </script>
+
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/diaryshow.css">
+  </head>
+  <body>
+    <header>
+        <div>
+            <h1>
+                <a href="index.html"
+                  ><img src="./css/images/moodlogo_42.png" alt="상단로고이미지"
+                ></a>
+            </h1>
+            <nav>
+                <ul>
+                  <li><a href="./diarywrite.html">일기 쓰기</a></li>
+                  <li><a href="./diaryshow">나의 한 달</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="content">
+        <div class="content_box">
+            <h2 class="hidden">작성한 일기들 보여주는 페이지</h2>
+            <% data.forEach(function (diary, index) { %>
+                <div>
+                    <ul>
+                        <li><%= diary.title %></li>
+                        <li><span><%= diary.mood %></span></li>
+                        <li><%= diary.date.toLocaleDateString() %></li>
+                        <li><%= diary.usertext %></li>
+                        <li><a href="./modify/<%= diary.number %>">수정</a></li>
+                        <li><a onclick="deleteDiary('./delete/<%= diary.number %>')">삭제</a></li>
+                    </ul>
+                </div>
+            <% }); %>
+        </div>
+    </section>
+    <footer>
+        <div>
+            <address>
+                경기도 성남시 중원구 성남동 3219번지 KR 아트팰리스 4호 5층<br>
+                COPYRIGHT &copy; 2023 소공소공. ALL RIGHTS RESERVED.
+              </address>
+              <h2><img src="./css/images/moodlogo_42.png" alt="하단로고이미지"></h2>
+        </div>
+    </footer>
+  </body>
+</html>
