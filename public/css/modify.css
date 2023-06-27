@@ -117,9 +117,6 @@ box-sizing: border-box;
   margin: 10px 0 40px 0;
 
 }
-/* .writeBox>form>ul>li>input:focus{
-  border: none;
-} */
 .write_box>form>ul>li{
   margin-bottom: 30px;
 }
@@ -157,6 +154,7 @@ box-sizing: border-box;
   font-size: 16px;
   line-height: 30px;
   resize: none;
+  white-space: pre;
 }
 input:focus, textarea:focus{
   outline: none;

@@ -105,6 +105,7 @@ nav.emotions>p:nth-child(1){
     font-size: 16px;
     line-height: 30px;
     resize: none;
+    white-space: pre;
 }
 .write_box>form>button{
     background-color: #fff08A;

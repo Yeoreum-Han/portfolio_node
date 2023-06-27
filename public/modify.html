@@ -6,6 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mood Diary</title>
 
+    <script>
+      function confirm() {
+        let title = document.getElementById("title").value;
+        let date = document.getElementById("date").value;
+        let mood = document.getElementById("mood").value;
+        let usertext = document.getElementById("usertext").value;
+
+        let form = document.getElementById("form");
+
+        if (title == "" || date == "" || mood == "" || usertext == "") {
+          alert("모든 항목을 작성해주세요!");
+          return false;
+        }
+        if (title.length > 20) {
+          alert("제목은 20글자를 초과할 수 없습니다.");
+          return false;
+        }
+        if(mood.length > 30) {
+            alert("감정은 30글자를 초과할 수 없습니다");
+            return false;
+        }
+        form.submit();
+      }
+    </script>
+
+
     <link rel="stylesheet" href="/css/common.css">
     <link rel="stylesheet" href="/css/modify.css">
   </head>
@@ -29,15 +55,15 @@
         <div class="content_box">
             <h2 class="hidden">일기 작성페이지</h2>
             <div class="write_box">
-                <form method="post">
+                <form method="post" id="form">
                     <p>오늘의 일기</p>
                     <ul>
-                        <li><input type="text" name="title" value="<%= data.title %>"></li>
-                        <li><input type="date" name="date" value="<%= data.date %>"></li>
-                        <li><input type="text" name="mood" value="<%= data.mood %>"></li>
+                        <li><input type="text" name="title" value="<%= data.title %>" id="title"></li>
+                        <li><input type="date" name="date" value="<%= data.date %>" id="date"></li>
+                        <li><input type="text" name="mood" value="<%= data.mood %>" id="mood"></li>
                         <li><textarea id="usertext" name="usertext" cols="100" rows="10"><%= data.usertext %></textarea></li>
                     </ul>
-                    <button type="submit">저장</button>
+                    <button type="button" onclick="confirm()">저장</button>
                 </form>
             </div>
         </div>

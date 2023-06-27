@@ -25,7 +25,8 @@ app.get('/diarywrite',(req, res)=>{
 });
 app.post('/diarywrite', (req, res)=>{
     const body = req.body;
-    connection.query('insert into diaries (title, mood, date, usertext) values (?,?,?,?);',[body.title, body.mood, body.date, body.usertext],(err,results)=>{
+    let timestamp = new Date().getTime();
+    connection.query('insert into diaries (title, mood, date, timestamp, usertext) values (?,?,?,?,?);',[body.title, body.mood, body.date, timestamp, body.usertext],(err,results)=>{
         if (err) throw err;
         res.redirect('/diaryshow');
     });
@@ -34,7 +35,7 @@ app.post('/diarywrite', (req, res)=>{
 // 조회페이지 - 파일열고, 테이블 내용 보여주기
 app.get('/diaryshow', (req, res)=>{
     fs.readFile('public/diaryshow.html', 'utf-8', (err,data)=>{
-        connection.query('select * from diaries order by date desc limit 31', (err, results,fields)=>{
+        connection.query('select * from diaries order by timestamp desc limit 31', (err, results,fields)=>{
             if(err) throw err;
             res.send(ejs.render(data, {data:results,}));
         });
