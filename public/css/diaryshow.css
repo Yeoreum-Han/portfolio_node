@@ -86,8 +86,9 @@ span::before{
     /* margin-top: 2px; */
     padding: 10px 10px;
     box-sizing: border-box;
-    white-space: pre;
+    white-space: pre-wrap;
     overflow: auto;
+    text-overflow: ellipsis;
     border-top: 1px solid #333;
     border-bottom: 1px solid #333;
     font-size: 14px;
