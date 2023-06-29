@@ -35,10 +35,11 @@ app.post('/diarywrite', (req, res)=>{
 // 조회페이지 - 파일열고, 테이블 내용 보여주기
 app.get('/diaryshow', (req, res)=>{
     fs.readFile('public/diaryshow.html', 'utf-8', (err,data)=>{
-        connection.query('select * from diaries order by timestamp desc limit 31', (err, results,fields)=>{
+        connection.query('select * from diaries where date between DATE_ADD(NOW(), INTERVAL -1 MONTH) and NOW() order by timestamp desc', (err, results,fields)=>{
             if(err) throw err;
             res.send(ejs.render(data, {data:results,}));
         });
+
     });
 });
 

@@ -58,7 +58,7 @@ span::before{
     content: "";
     width: 100%;
     height: 12px;
-    background-color: #d4edff91;
+    background-color: #fff08A;
     position: absolute;
     top: 6px;
     z-index: -1;
@@ -112,4 +112,5 @@ span::before{
 }
 .content_box>div>ul>li>a:hover{
     background-color: #d4edff91;
+    cursor: pointer;
 }
