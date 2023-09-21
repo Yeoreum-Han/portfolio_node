@@ -18,76 +18,71 @@ a{
 
 header{
     width: 100%;
-    height: 70px;
+    height: 5vw;
     text-align: center;
     border-bottom: 1px solid #333;
-    /* box-sizing: border-box; */
-    /* background-color: aliceblue; */
 }
 header>div{
-    width: 600px;
-    height: 70px;
-    /* background-color: antiquewhite; */
+    width: 80%;
+    height: 5vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 header>div>h1{
-    float: left;
-    margin-left: 20px;
-    margin-top: 15px;
+    width: 10vw;
+    height: 5vw;
+}
+header>div>h1>a{
+    display: block;
+    background: url(./images/moodlogo_42.png) no-repeat center /contain;
+    width: 10vw;
+    height: 5vw;
 }
 header>div>nav{
-    float: right;
-    width: 400px;
-    height: 70px;
-    /* background-color: aquamarine; */
-}
-header>div>nav>ul>li{
-    float: left;
-    margin-top: 15px;
-    /* background-color: azure; */
-}
-header>div>nav>ul>li:nth-child(1){
-    margin-left: 30px;
-    margin-right: 10px;
+    width: 20vw;
+} 
+header>div>nav>ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 header>div>nav>ul>li>a{
-    /* background-color: blueviolet; */
-    display: inline-block;
-    font-size: 18px;
-    width: 120px;
-    height: 45px;
-    padding: 10px;
-    margin: 0px 20px;
-    box-sizing: border-box;
+    font-size: 1.15vw;
 }
 header>div>nav>ul>li>a:hover{
     font-weight: bold;
 }
+
 .content{
     width: 100%;
 }
 footer{
     width: 100%;
-    height: 70px;
+    height: 5vw;
     text-align: center;
     color: #ccc;
     border-top: 1px solid #333;
-    /* background-color: aliceblue; */
 }
 footer>div{
-    width: 600px;
-    height: 70px;
-    /* background-color: antiquewhite; */
+    width: 80%;
+    height: 5vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 footer>div>address{
-    float: left;
-    margin: 20px 10px 0 20px;
-    /* margin-left: 20px;
-    margin-top: 20px; */
-    font-size: 12px;
+    font-size: 1vw;
 }
-footer>div>h2>img{
-    margin-top: 10px;
+footer>div>h2>a{
+    display: block;
+    background: url(./images/moodlogo_42.png) no-repeat center /contain;
+    width: 10vw;
+    height: 5vw;
 }
+
 
 
 
