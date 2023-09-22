@@ -83,6 +83,29 @@ footer>div>h2>a{
     height: 5vw;
 }
 
+@media screen and (max-width:767px) {
+    header>div>nav>ul>li>a{
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+    }
+    footer{
+        height: 10vw;
+    }
+    footer>div{
+        height: 10vw;
+    }
+    footer>div>address{
+        width: 50vw;
+        height: 5vw;
+        font-size: 0.6vw;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+}
 
 
 
