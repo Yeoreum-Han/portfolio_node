@@ -2,7 +2,7 @@
 
 .content{
     position: relative;
-    height: 50vw;
+    height: 60vw;
 }
 .content_box{
     display: flex;
@@ -50,4 +50,42 @@ p>a{
 p>a:hover{
     background-color: #333;
     color: #fff;
+}
+
+@media screen and (max-width:767px) {
+    .content{
+        height: 90vw;
+    }
+    .content_box{
+        flex-direction: column;
+    }
+    .mainImg{
+        width: 80vw;
+        height: 40vw;
+        margin: 1vw 0 0 0;
+    }
+    .mainText{
+        width: 80vw;
+        height: 45vw;
+        padding: 5vw 0 0 0;
+    }
+    .mainText>p:nth-child(2){
+        font-size: 0.9vw;
+        line-height: 5vw;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .mainText>p:nth-child(3){
+        font-size: 0.6vw;
+        width: 30vw;
+    }
+    .mainText>p:nth-child(3)>a{
+        display: block;
+        width: 30vw;
+        padding: 3%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    } 
 }
