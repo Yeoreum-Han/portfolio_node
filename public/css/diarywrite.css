@@ -185,11 +185,9 @@ textarea:focus {
         align-items: center;
         width: 90%;
         height: 100%;
-        background-color: aqua;
     }
 
     .emotions {
-        background-color: yellow;
         width: 30%;
         height: 100%;
         margin: 0;
@@ -246,7 +244,6 @@ textarea:focus {
         width: 15vw;
     }    
 
-
     .write_box>form>button {
         width: 8vw;
         padding: 1.5% 0;
@@ -256,8 +253,7 @@ textarea:focus {
 
 @media all and (max-width:479px) {
     .content{
-        height: 80vw;
-        background-color: tomato;
+        height: 110vw;
     }
     .content_box {
         width: 100%;
@@ -265,26 +261,69 @@ textarea:focus {
     }
     .emotions {
         width: 100%;
-        height: 30vw;
-        flex-direction: row;
+        height: 45vw;
         align-items: center;
     }
     .emotions>p{
         display: none;
     }
+    .emotions>ul{
+        width: 90%;
+        height: 22vw;
+        padding: 0.5vw 0;
+        box-sizing: border-box;
+        overflow-y: scroll;
+    }
     .positive{
-        border-right: 1px solid black;
+        border-bottom: 1px solid #333;
+    }
+    .write_box{
+        width: 100%;
+        height: 65vw;
+        margin: 0;
+        padding: 5vw 0 0 0;
+        overflow-x: hidden;
+
+    }
+    .write_box>form {
+        padding: 0;
         box-sizing: border-box;
     }
 
-    .write_box{
+    .write_box>form>p {
+        margin: 3vw 0;
         width: 100%;
-        height: 50vw;
+        height: 6vw;
+        font-size: 4vw;
+        text-align: center;
     }
-    
+
+    .write_box>form>ul{
+        width: 80%;
+    }
+    .write_box>form>ul>li:nth-child(1)>input {
+        width: 40vw;
+        letter-spacing: 5px;
+        text-align: center;
+        text-indent: 0;
+    }
+    .write_box>form>ul>li:nth-child(2)>input {
+        width: 25vw;
+    }
+    .write_box>form>ul>li:nth-child(3)>input {
+        text-indent: 0;
+        width: 25vw;
+    }
+    .write_box>form>ul>li:nth-child(4)>textarea {
+        width: 90%;
+    }    
     .write_box>form>button {
-        width: 11vw;
-        padding: 1.5% 1%;
+        width: 20vw;
+        padding: 0.5%;
+        margin: 0 auto;
     }
-    
+
+
+ 
+
 }
